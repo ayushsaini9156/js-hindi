@@ -1,13 +1,13 @@
 //Array
 
 let arr=[3,4,5,6,7];
-console.log(arr[3]);
+// console.log(arr[3]);
 
 
 const myHereos = ["Shaktimaan","naagraj"]
 const myArr=new Array(1,2,3,4,5)
 
-console.log(myArr[0]);
+// console.log(myArr[0]);
 
 //Array Methods 
 
@@ -23,7 +23,8 @@ console.log(myArr[0]);
 // console.log(myArr.indexOf(1));
 
 
-const newArr = myArr.join
+const newArr = myArr.join()
 console.log(myArr);
+console.log(typeof newArr);
 
 
