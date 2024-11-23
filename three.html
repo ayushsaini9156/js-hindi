@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur JavaScript</title>
+</head>
+<body>
+    <h1>Chai aur JavaScript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const sayDate = function (str) {
+        const now = new Date().toLocaleString(); // Get a human-readable date and time
+        document.querySelector('h1').innerHTML = `${str} ${now}`; // Update the <h1>
+        console.log("Current time:",str, now); // Log the current time
+    };
+
+    let intervalId;
+
+    const changeText = function () {
+        if (!intervalId) { // Prevent multiple intervals from being created
+            intervalId = setInterval(sayDate, 1000,'current time:');
+        }
+    };
+
+    document.querySelector('#start').addEventListener('click', changeText);
+
+    document.querySelector('#stop').addEventListener('click', function () {
+        clearInterval(intervalId);
+        intervalId = null; // Reset the intervalId
+    });
+</script>
+</html>
